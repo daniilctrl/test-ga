@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN-API Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app">
+        <section class="controls">
+            <div class="field">
+                <label for="idInstance">idInstance</label>
+                <input type="text" id="idInstance" placeholder="1101000000" autocomplete="off">
+            </div>
+
+            <div class="field">
+                <label for="apiTokenInstance">ApiTokenInstance</label>
+                <input type="text" id="apiTokenInstance" placeholder="abcdef0123456789..." autocomplete="off">
+            </div>
+
+            <button type="button" class="btn" data-action="getSettings">getSettings</button>
+            <button type="button" class="btn" data-action="getStateInstance">getStateInstance</button>
+
+            <div class="group">
+                <div class="field">
+                    <label for="msgPhone">Номер телефона получателя</label>
+                    <input type="text" id="msgPhone" placeholder="79991234567" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="msgText">Сообщение</label>
+                    <textarea id="msgText" rows="3" placeholder="Hello World!"></textarea>
+                </div>
+                <button type="button" class="btn" data-action="sendMessage">sendMessage</button>
+            </div>
+
+            <div class="group">
+                <div class="field">
+                    <label for="filePhone">Номер телефона получателя</label>
+                    <input type="text" id="filePhone" placeholder="79991234567" autocomplete="off">
+                </div>
+                <div class="field">
+                    <label for="fileUrl">URL файла</label>
+                    <input type="text" id="fileUrl" placeholder="https://my.site.com/img/horse.png" autocomplete="off">
+                </div>
+                <button type="button" class="btn" data-action="sendFileByUrl">sendFileByUrl</button>
+            </div>
+        </section>
+
+        <section class="output">
+            <label for="response">Ответ:</label>
+            <textarea id="response" readonly placeholder="Здесь появится ответ выбранного метода"></textarea>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
